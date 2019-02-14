@@ -14,11 +14,11 @@ router.post('/principal/pages', Guard.rules.isAuthenticated, controllers.user.cr
 router.put('/principal/pages/:id', Guard.rules.isAuthenticated, controllers.user.updatePage);
 router.delete('/principal/pages/:id', Guard.rules.isAuthenticated, controllers.user.deletePage);
 
-router.get('/principal/pages/:id/block/:blockId', Guard.rules.isAuthenticated, controllers.user.getPageBlockById);
-router.get('/principal/pages/:id/block', Guard.rules.isAuthenticated, controllers.user.getPageBlocks);
-router.post('/principal/pages/:id/block', Guard.rules.isAuthenticated, controllers.user.createBlock);
-router.put('/principal/pages/:id/block/:blockId', Guard.rules.isAuthenticated, controllers.user.updateBlock);
-router.delete('/principal/pages/:id/block/:blockId', Guard.rules.isAuthenticated, controllers.user.deleteBlock);
+router.get('/principal/pages/:id/blocks/:blockId', Guard.rules.isAuthenticated, controllers.user.getPageBlockById);
+router.get('/principal/pages/:id/blocks', Guard.rules.isAuthenticated, controllers.user.getPageBlocks);
+router.post('/principal/pages/:id/blocks', Guard.rules.isAuthenticated, controllers.user.createBlock);
+router.put('/principal/pages/:id/blocks/:blockId', Guard.rules.isAuthenticated, controllers.user.updateBlock);
+router.delete('/principal/pages/:id/blocks/:blockId', Guard.rules.isAuthenticated, controllers.user.deleteBlock);
 
 
 module.exports = router;
